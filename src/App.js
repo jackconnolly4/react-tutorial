@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Table from "./Table";
+import ReactPlayer from "react-player";
 
 class App extends Component {
   state = {
@@ -36,6 +37,20 @@ class App extends Component {
     return (
       <div className="container">
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
+        <ReactPlayer
+          url="https://soundcloud.com/ethereal/lost-prod-ethereal"
+          muted="true"
+          controls="true"
+          light="false"
+          config={{
+            youtube: {
+              playerVars: { showinfo: 1 },
+            },
+            facebook: {
+              appId: "12345",
+            },
+          }}
+        />
       </div>
     );
   }
