@@ -37,20 +37,7 @@ class App extends Component {
     return (
       <div className="container">
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
-        <ReactPlayer
-          url="https://soundcloud.com/ethereal/lost-prod-ethereal"
-          muted="true"
-          controls="true"
-          light="false"
-          config={{
-            youtube: {
-              playerVars: { showinfo: 1 },
-            },
-            facebook: {
-              appId: "12345",
-            },
-          }}
-        />
+        <ReactPlayer className="react-player" url="https://www.youtube.com/watch?v=0cVlTeIATBs" />
       </div>
     );
   }
